@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS person (id uuid, first_name varchar(255), last_name varchar(255));

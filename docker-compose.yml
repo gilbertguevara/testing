@@ -1,0 +1,13 @@
+version: "3.6"
+services:
+  db:
+    image: docker.io/postgres:15
+    environment:
+      - PGDATA=/pgtmpfs
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=testuser
+      - POSTGRES_DB=testing
+    tmpfs:
+      - /pgtmpfs
+    ports:
+      - 5432:5432
